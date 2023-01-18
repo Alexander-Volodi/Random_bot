@@ -19,7 +19,8 @@ def start_message(message):
         btn2 = types.KeyboardButton("Показать фразу")
         markup.add(btn1, btn2)
         bot.send_message(message.chat.id,
-                         f"Здравствуйте, здесь Вам нужно ввести слова и получить случайный ответ.", reply_markup=markup)
+                         f'''Здравствуйте, здесь Вам нужно ввести слова (используя кнопку "Добавить фразу" для каждого слова) получить случайный ответ.''',
+                         reply_markup=markup)
     elif message.text == '/end':
         try:
             markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
